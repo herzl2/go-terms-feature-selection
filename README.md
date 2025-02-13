@@ -38,14 +38,24 @@
 - **Script:** `all_merged.py`
 - **Output:** `all_final_merged_output.tsv`
 
-### 7. Subgraph Creation (Biological Process & Molecular Function)
-- **Input:** `output_quickgo.tsv`, `go-basic.obo`
-- **Script:** `subgraph_biological_process.py`, `subgraph_molecular_function.py`
-- **Output:** 
-  - `subgraph_biological_process.graphml`
-  - `subgraph_molecular_function.graphml`
+### 7. Enrichment Analysis
+- **Input:** `output_quickgo_cleaned.tsv`, `go.obo`
+- **Script:** `go_enrichment.py`
+- **Output:** `go_enrichment_results.csv`
 
-### 8. GPX Filter (for Biological Process & Molecular Function)
-- **Output:**
-  - `gpx_subgraph_biological_process.graphml`
-  - `gpx_subgraph_molecular_function.graphml`
+### 8. Graph Creation 
+- **Input:** `output_quickgo_cleaned.tsv`, `go.obo`
+- **Script:** `graphs.py`
+- **Output:** 
+  - `go_graph.graphml`, `go_graph.txt`
+  - `gpx_subgraph.graphml`, `gpx_subgraph.txt`
+
+### 9. GO-terms-Proteins relationship
+- **Input:** `gpx_subgraph.txt`
+- **Script:** `proteins_gpx_go.py`
+- **Output:** `proteins_gpx_go.txt`, `proteins_gpx_go.graphml`
+
+### 10. UniprotID-Proteinnames
+- **Input:** `proteins_gpx_go.txt`
+- **Script:** `uniprot-proteins_gpx.py`
+- **Output:** `uniprot-proteins_gpx.scv`
