@@ -14,12 +14,12 @@
 - **Script:** `quickgo.sh`
 - **Output:** `output_quickgo.tsv`
 
-### 3. Run Uniprot Analysis
+### 3. optional Run Uniprot Analysis
 - **Input:** `uniprot_ids.txt`
 - **Script:** `uniprot.sh`
 - **Output:** `output_uniprot.tsv`
 
-### 4. Run InterProScan Analysis
+### 4. optional Run InterProScan Analysis
 - **Input:** `interpro_ids.txt`
 - **Script:** `interproscan.sh`
 - **Output:** `output_interpro.tsv`
