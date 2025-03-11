@@ -27,7 +27,7 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
 ## Usage 
 - **Input Data:** Place your FASTA file (e.g., `oxidative_stress.faa`) in the designated data folder.
 - **Configurations:** Adjust any parameters in the configuration files (if provided) to customize API endpoints or filtering criteria.
-- **Outputs:** Processed files, GO graphs (`go_graph.graphml`, case-specific subgraph `gpx_subgraph.graphml`), and analysis reports are generated in the output directory (with `uniprot-proteins_gpx.tsv` for protein name assignments.
+- **Outputs:** Processed files, GO graphs (`go_graph.graphml`, case-specific subgraph `gpx_subgraph.graphml`), and analysis reports are generated in the output directory (with `uniprot-proteins_gpx.tsv`) for protein name assignments.
 
 
 ## Running the Pipeline 
@@ -56,12 +56,11 @@ This command will execute all the scripts in the correct order, generating the a
   Processes InterPro IDs to retrieve functional domain data and related GO annotations.
 
 ### 3. Enrichment Analysis 
-
 - **output_quickgo_cleaned.py:**  
   Cleans the QuickGO output by removing redundant entries and ensuring consistency across datasets (`output_quickgo_cleaned.tsv`).
 
 - **go_enrichment.py:**  
-  Analyzes the cleaned GO annotations and computes enrichment statistics to highlight significant GO terms (`go_enrichment_results.tsv`).
+  Analyzes the cleaned GO annotations and computes enrichment statistics to highlight significant GO terms (`go_enrichment_results.tsv`) and gives information about not adopted UniProtIDs .
 
 ### 4. GO Subgraph Extraction 
 - **obo_graphs.py:**  
