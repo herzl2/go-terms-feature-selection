@@ -6,6 +6,7 @@
 - **Input:** `oxidative_stress.faa`
 - **Script:** `extract_ids.sh`
 - **Output:** `uniprot_ids.txt`
+- Description: This script extracts Uniprot IDs from the provided protein sequence file  and saves them to a text file.
 
 ### 2. Run QuickGO Analysis 
 - **Input:** `uniprot_ids.txt`
