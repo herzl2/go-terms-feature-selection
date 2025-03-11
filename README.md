@@ -72,7 +72,7 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
   Build comprehensive GO term graphs from the `go.obo` file, generating full GO graphs (`obo_go_graph.graphml`) and case-specific subgraphs (`obo_gpx_graph.graphml`) for the whole Gene Ontology to get an overview of possible GO terms for comparison of the actual results.
 
 - **graphs.py:**  
-  Vizualizes results as Go term-Graph for dataset of interest (`output_quickgo_cleaned.tsv` combined with go.obo) as `go_graph.graphml` and `go_graph.txt`. For case-specific subgraph `gpx_subgraph.graphml` and `gpx_subgrap.txt` are created.
+  Vizualizes results as Go term graph for dataset of interest (`output_quickgo_cleaned.tsv` combined with go.obo) as `go_graph.graphml` and `go_graph.txt`. For case-specific subgraph `gpx_subgraph.graphml` and `gpx_subgrap.txt` are created.
 
 - **proteins_gpx_go.py & uniprot-proteins_gpx.py:**  
   Map GPX-associated GO terms to protein IDs (`proteins_gpx_go.txt`) and then query UniProt to retrieve their names (`uniprot-proteins_gpx.tsv`), ultimately visualizing the association.
