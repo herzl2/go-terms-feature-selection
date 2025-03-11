@@ -91,7 +91,7 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
 - **Reproducibility:** Snakemake ensures that the entire process is easily reproducible and extendable.
 
 ### Authors
-•	Barbara Sula
-•	Luna Herz
+- Barbara Sula
+- Luna Herz
 
 
