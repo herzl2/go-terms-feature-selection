@@ -1,6 +1,5 @@
 # Gene Annotation & Feature Selection with GO Terms
 
-
 ## Overview
 This project implements a pipeline for annotating human proteins using Gene Ontology (GO) terms with a focus on oxidative stress-related proteins. As a case study, we illustrate the pipeline using the glutathione peroxidase (GPX) family—chosen based on our research interest—but the workflow is fully adaptable to other protein families.
 
