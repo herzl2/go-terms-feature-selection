@@ -1,12 +1,10 @@
-# go-terms-feature-selection
-
 # Gene Annotation & Feature Selection with GO Terms
 
 ## Workflow
 
 ### 1. Extract Uniprot IDs
 - **Input:** `oxidative_stress.faa`
-- **Script:** `1extract_ids.sh`
+- **Script:** `extract_ids.sh`
 - **Output:** `uniprot_ids.txt`
 
 ### 2. Run QuickGO Analysis 
@@ -24,12 +22,12 @@
 - **Script:** `interproscan.sh`
 - **Output:** `output_interpro.tsv`
 
-### optional 5. Comparison of GO Terms (Common & Unique)
+### 5. optional Comparison of GO Terms (Common & Unique)
 - **Input:** `output_quickgo.tsv`, `output_uniprot.tsv`
 - **Script:** `comparison_GOterms.py`
 - **Output:** `comparison_GOterms.tsv`
 
-### optional 6. Merging Results
+### 6. optional Merging Results
 - **Input:** `output_quickgo.tsv`, `output_uniprot.tsv`
 - **Script:** `merged_uniprot_quickgo.py`
 - **Output:** `merged_uniprot_quickgo.tsv`
