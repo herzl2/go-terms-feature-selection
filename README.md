@@ -89,3 +89,9 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
 - **Flexibility:** We used the GPX family as an example, but the pipeline works with any set of proteins.
 - **Modularity:** The workflow is divided into simple steps for data extraction, cleaning, analysis, and visualization.
 - **Reproducibility:** Snakemake ensures that the entire process is easily reproducible and extendable.
+
+### Authors
+•	Barbara Sula
+•	Luna Herz
+
+
