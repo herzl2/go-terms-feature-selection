@@ -69,25 +69,15 @@ This command will execute all the scripts in the correct order, generating the a
 - **proteins_gpx_go.py & uniprot-proteins_gpx.py:**  
   Map GPX-associated GO terms to protein IDs and then query UniProt to retrieve their names, ultimately visualizing the association.
 
-### 5. Optional Comparison of GO Terms (Common & Unique)
-- **Input:** `output_quickgo.tsv`, `output_uniprot.tsv`
-- **Script:** `comparison_GOterms.py`
-- **Output:** `comparison_GOterms.tsv`
-- Compares the GO terms obtained from QuickGO and UniProt analyses, identifying common and unique terms, and outputs the results to a TSV file.
-
-### 6. Optional Merging of Results
-- **Input:** `output_quickgo.tsv`, `output_uniprot.tsv`
-- **Script:** `merged_uniprot_quickgo.py`
-- **Output:** `merged_uniprot_quickgo.tsv`
-- Merges the results from QuickGO and UniProt analyses into a single file.
-
-- **Input:** `merged_uniprot_quickgo.tsv`, `output_interpro.tsv`
-- **Script:** `all_merged.py`
-- **Output:** `all_final_merged_output.tsv`
-- Combines the previously merged results with the InterProScan results, producing a comprehensive output file.
+### 5. Optional Analysis
+- **Comparison of GO Terms**:
+    `comparison_GOterms.py`: Compares GO terms from QuickGO and UniProt outputs, identifying common and unique terms, and outputs the results to a TSV file.
+- **Merging Results**:
+    `merged_uniprot_quickgo.py`: Merges outputs from QuickGO and UniProt analyses.
+    `all_merged.py`: Combines the merged data with InterProScan results into a comprehensive output file.
 
 ### Final Notes
 
 - **Flexibility:** We used the GPX family as an example, but the pipeline works with any set of proteins.
 - **Modularity:** The workflow is divided into simple steps for data extraction, cleaning, analysis, and visualization.
-- **Reproducibility:** Snakemake makes it easy to run and extend the process consistently.
+- **Reproducibility:** Snakemake ensures that the entire process is easily reproducible and extendable.
