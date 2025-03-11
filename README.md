@@ -47,7 +47,7 @@
 - **Input:** `output_quickgo_cleaned.tsv`, `go.obo`
 - **Script:** `go_enrichment.py`
 - **Output:** `go_enrichment_results.tsv`
-- Description: This script performs GO term enrichment analysis using the cleaned QuickGO results and the GO ontology file, outputting the results to a TSV file.
+- Description: This script performs GO term enrichment analysis using the cleaned QuickGO results and the Gene Ontology file, outputting the results to a TSV file.
 
 ### 8. Graph Creation 
 - **Input:** `output_quickgo_cleaned.tsv`, `go.obo`
