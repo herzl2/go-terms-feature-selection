@@ -16,7 +16,7 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
 - Unix-based system
 - [Python 3.12](https://www.python.org/downloads/)
 - [Snakemake](https://snakemake.readthedocs.io/en/stable/)
-- [Cytoscape] (https://cytoscape.org/) for graph visualization
+- [Cytoscape](https://cytoscape.org/) for graph visualization
 - Required Python libraries:
   - pandas
   - networkx
@@ -29,7 +29,7 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
 ## Usage 
 1. **Input Data:** Prepare your input file in FASTA format (e.g., `oxidative_stress.faa`).
 2. **Configurations:** Adjust any parameters such as API endpoints or filtering criteria
-3. ** Run the Pipeline**
+3. **Run the Pipeline**
     The entire workflow is automated using Snakemake.
     - Run a dry-run to check the workflow:
     ```bash
