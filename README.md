@@ -60,7 +60,7 @@ This command will execute all the scripts in the correct order, generating the a
   Cleans the QuickGO output by removing redundant entries and ensuring consistency across datasets (`output_quickgo_cleaned.tsv`).
 
 - **go_enrichment.py:**  
-  Analyzes the cleaned GO annotations and computes enrichment statistics to highlight significant GO terms (`go_enrichment_results.tsv`) and gives information about not adopted UniProtIDs .
+  Analyzes the cleaned GO annotations and computes enrichment statistics to highlight significant GO terms (`go_enrichment_results.tsv`) and gives information in the terminal about not adopted UniProtIDs .
 
 ### 4. GO Subgraph Extraction 
 - **obo_graphs.py:**  
