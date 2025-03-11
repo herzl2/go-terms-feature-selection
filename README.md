@@ -16,6 +16,7 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
 - Unix-based system
 - [Python 3.12](https://www.python.org/downloads/)
 - [Snakemake](https://snakemake.readthedocs.io/en/stable/)
+- [Cytoscape] (https://cytoscape.org/) for graph visualization
 - Required Python libraries:
   - pandas
   - networkx
