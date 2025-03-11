@@ -25,22 +25,25 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
   - jq (for shell scripts)
 
 ## Usage 
-- **Input Data:** Place your FASTA file (e.g., `oxidative_stress.faa`) in the designated data folder.
-- **Configurations:** Adjust any parameters in the configuration files (if provided) to customize API endpoints or filtering criteria.
-- **Outputs:** Processed files, GO graphs (`go_graph.graphml`, case-specific subgraph `gpx_subgraph.graphml`), and analysis reports are generated in the output directory (with `uniprot-proteins_gpx.tsv`) for protein name assignments.
-
-
-## Running the Pipeline 
-The entire workflow is automated using Snakemake. Run a dry-run to check the workflow:
-```bash
-snakemake -n 
-```
-Then execite the full pipeline: 
-```bash
-snakemake -j 1 
-```
-This command will execute all the scripts in the correct order, generating the annotated output files and GO graphs.
-
+1. **Input Data:** Prepare your input file in FASTA format (e.g., `oxidative_stress.faa`).
+2. **Configurations:** Adjust any parameters such as API endpoints or filtering criteria
+3. ** Run the Pipeline**
+    The entire workflow is automated using Snakemake.
+    - Run a dry-run to check the workflow:
+    ```bash
+    snakemake -n 
+    ```
+    - Then execite the full pipeline: 
+    ```bash
+    snakemake -j 1 
+    ```
+    This command will execute all the scripts in the correct order, generating the annotated output files and GO graphs.
+   
+4. **Outputs:**
+   - Processed files (e.g., cleaned annotation TSV files) and merged results are generated in the output directory.
+   - GO graphs are produced in GraphML format, including a full GO network (`obo_go_graph.graphml`) and case-specific subgraphs (e.g., `obo_gpx_graph.graphml`).
+   - Enrichment analysis reports and any additional output files are also placed in the output directory.
+  
 ## Workflow and Script Overview 
 ### 1. **extract_ids.sh:**  
   Reads the FASTA file (`oxidative_stress.faa`) and extracts UniProt IDs. The output is stored in `uniprot_ids.txt`.
