@@ -27,7 +27,8 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
 ## Usage 
 - **Input Data:** Place your FASTA file (e.g., `oxidative_stress.faa`) in the designated data folder.
 - **Configurations:** Adjust any parameters in the configuration files (if provided) to customize API endpoints or filtering criteria.
-- **Outputs:** Processed files, GO graphs (e.g., `obo_go_graph.graphml` and case-specific subgraphs like `obo_gpx_graph.graphml`), and analysis reports are generated in the output directory.
+- **Outputs:** Processed files, GO graphs (`go_graph.graphml`, case-specific subgraph `gpx_subgraph.graphml`), and analysis reports are generated in the output directory (with `uniprot-proteins_gpx.tsv` for protein name assignments.
+
 
 ## Running the Pipeline 
 The entire workflow is automated using Snakemake. Run a dry-run to check the workflow:
@@ -57,17 +58,20 @@ This command will execute all the scripts in the correct order, generating the a
 ### 3. Enrichment Analysis 
 
 - **output_quickgo_cleaned.py:**  
-  Cleans the QuickGO output by removing redundant entries and ensuring consistency across datasets.
+  Cleans the QuickGO output by removing redundant entries and ensuring consistency across datasets (`output_quickgo_cleaned.tsv`).
 
 - **go_enrichment.py:**  
-  Analyzes the cleaned GO annotations and computes enrichment statistics to highlight significant GO terms.
+  Analyzes the cleaned GO annotations and computes enrichment statistics to highlight significant GO terms (`go_enrichment_results.tsv`).
 
 ### 4. GO Subgraph Extraction 
-- **graphs.py & obo_graphs.py:**  
-  Build comprehensive GO term graphs from the `go.obo` file, generating full GO graphs (`obo_go_graph.graphml`) and case-specific subgraphs subgraphs (eg., `obo_gpx_graph.graphml`).
+- **obo_graphs.py:**  
+  Build comprehensive GO term graphs from the `go.obo` file, generating full GO graphs (`obo_go_graph.graphml`) and case-specific subgraphs subgraphs (`obo_gpx_graph.graphml`) for the whole Gene Ontology to get an overview of possible GO terms for comparison of the actual results.
+
+- **graphs.py:**  
+  Vizualizes results as Go term-Graph for dataset of interest (`output_quickgo_cleaned.tsv` combined with go.obo) as `go_graph.graphml` and `go_graph.txt`. For case-specific subgraph `gpx_subgraph.graphml` and `gpx_subgrap.txt` are created.
 
 - **proteins_gpx_go.py & uniprot-proteins_gpx.py:**  
-  Map GPX-associated GO terms to protein IDs and then query UniProt to retrieve their names, ultimately visualizing the association.
+  Map GPX-associated GO terms to protein IDs (`proteins_gpx_go.txt`) and then query UniProt to retrieve their names (`uniprot-proteins_gpx.tsv`), ultimately visualizing the association.
 
 ### 5. Optional Analysis
 - **Comparison of GO Terms**:
