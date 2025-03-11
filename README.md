@@ -1,70 +1,94 @@
 # Gene Annotation & Feature Selection with GO Terms
 
-## Workflow
 
-### 1. Extract Uniprot IDs
-- **Input:** `oxidative_stress.faa`
-- **Script:** `extract_ids.sh`
-- **Output:** `uniprot_ids.txt`
-- Description: This script extracts Uniprot IDs from the provided protein sequence file  and saves them to a text file.
+## Overview
+This project implements a pipeline for annotating human proteins using Gene Ontology (GO) terms with a focus on oxidative stress-related proteins. As a case study, we illustrate the pipeline using the glutathione peroxidase (GPX) family—chosen based on our research interest—but the workflow is fully adaptable to other protein families.
 
-### 2. Run QuickGO Analysis 
-- **Input:** `uniprot_ids.txt`
-- **Script:** `quickgo.sh`
-- **Output:** `output_quickgo.tsv`
-- Description: This script performs a GO term analysis using the extracted Uniprot IDs and generates a tab-separated values file containing the results.
+It integrates data from UniProt, QuickGO, and InterPro to perform feature selection and enrichment analysis, providing comprehensive insights into the functional landscape of proteins under oxidative stress.
 
-### 3. optional Run Uniprot Analysis
-- **Input:** `uniprot_ids.txt`
-- **Script:** `uniprot.sh`
-- **Output:** `output_uniprot.tsv`
-- Description: This optional script conducts an analysis using the Uniprot database and outputs the results to a TSV file.
+## Key Features 
+- **Automated Data Retrieval:** Fetches protein sequences and annotations via APIs.
+- **GO Annotation Pipeline:** Uses shell scripts and Python to process, clean, and merge data.
+- **Graph Extraction:** Generates comprehensive GO term networks and case-specific subgraphs (e.g., GPX family).
+- **Enrichment Analysis:** Identifies the most abundant GO terms related to antioxidant functions.
+- **Reproducible Workflow:** Managed by Snakemake for streamlined execution.
 
-### 4. optional Run InterProScan Analysis
-- **Input:** `interpro_ids.txt`
-- **Script:** `interproscan.sh`
-- **Output:** `output_interpro.tsv`
-- Description: This optional script runs InterProScan analysis on the provided InterPro IDs and generates a TSV file with the results.
+### Dependencies
+- Unix-based system
+- [Python 3.12](https://www.python.org/downloads/)
+- [Snakemake](https://snakemake.readthedocs.io/en/stable/)
+- Required Python libraries:
+  - pandas
+  - networkx
+  - matplotlib
+  - obonet
+  - requests
+  - jq (for shell scripts)
 
-### 5. optional Comparison of GO Terms (Common & Unique)
+## Usage 
+- **Input Data:** Place your FASTA file (e.g., `oxidative_stress.faa`) in the designated data folder.
+- **Configurations:** Adjust any parameters in the configuration files (if provided) to customize API endpoints or filtering criteria.
+- **Outputs:** Processed files, GO graphs (e.g., `obo_go_graph.graphml` and case-specific subgraphs like `obo_gpx_graph.graphml`), and analysis reports are generated in the output directory.
+
+## Running the Pipeline 
+The entire workflow is automated using Snakemake. Run a dry-run to check the workflow:
+```bash
+snakemake -n 
+```
+Then execite the full pipeline: 
+```bash
+snakemake -j 1 
+```
+This command will execute all the scripts in the correct order, generating the annotated output files and GO graphs.
+
+## Workflow and Script Overview 
+### 1. **extract_ids.sh:**  
+  Reads the FASTA file (`oxidative_stress.faa`) and extracts UniProt IDs. The output is stored in `uniprot_ids.txt`.
+  
+### 2. Extracting Annotations from QuickGO/UniProt/InterProScan 
+- **quickgo.sh:**  
+  Queries QuickGO for GO annotations. The output is processed with `jq` to extract fields like qualifiers, GO aspects, and taxonomic IDs.
+
+- **uniprot.sh:**  
+  Uses `curl` to query the UniProt REST API for protein details including InterPro IDs, GO terms, and organism information. Uses `grep`, `sed`, and `tr` for data parsing.
+
+- **interpro.sh:**  
+  Processes InterPro IDs to retrieve functional domain data and related GO annotations.
+
+### 3. Enrichment Analysis 
+
+- **output_quickgo_cleaned.py:**  
+  Cleans the QuickGO output by removing redundant entries and ensuring consistency across datasets.
+
+- **go_enrichment.py:**  
+  Analyzes the cleaned GO annotations and computes enrichment statistics to highlight significant GO terms.
+
+### 4. GO Subgraph Extraction 
+- **graphs.py & obo_graphs.py:**  
+  Build comprehensive GO term graphs from the `go.obo` file, generating full GO graphs (`obo_go_graph.graphml`) and case-specific subgraphs subgraphs (eg., `obo_gpx_graph.graphml`).
+
+- **proteins_gpx_go.py & uniprot-proteins_gpx.py:**  
+  Map GPX-associated GO terms to protein IDs and then query UniProt to retrieve their names, ultimately visualizing the association.
+
+### 5. Optional Comparison of GO Terms (Common & Unique)
 - **Input:** `output_quickgo.tsv`, `output_uniprot.tsv`
 - **Script:** `comparison_GOterms.py`
 - **Output:** `comparison_GOterms.tsv`
-- Description: This script compares the GO terms obtained from QuickGO and Uniprot analyses, identifying common and unique terms, and outputs the comparison results to a TSV file.
+- Compares the GO terms obtained from QuickGO and UniProt analyses, identifying common and unique terms, and outputs the results to a TSV file.
 
-### 6. optional Merging Results
+### 6. Optional Merging of Results
 - **Input:** `output_quickgo.tsv`, `output_uniprot.tsv`
 - **Script:** `merged_uniprot_quickgo.py`
 - **Output:** `merged_uniprot_quickgo.tsv`
-- Description: This script merges the results from QuickGO and Uniprot analyses into a single file.
+- Merges the results from QuickGO and UniProt analyses into a single file.
 
 - **Input:** `merged_uniprot_quickgo.tsv`, `output_interpro.tsv`
 - **Script:** `all_merged.py`
 - **Output:** `all_final_merged_output.tsv`
-- Description: This script merges the previously merged results with the InterProScan results, producing a comprehensive output file
+- Combines the previously merged results with the InterProScan results, producing a comprehensive output file.
 
-### 7. Enrichment Analysis
-- **Input:** `output_quickgo_cleaned.tsv`, `go.obo`
-- **Script:** `go_enrichment.py`
-- **Output:** `go_enrichment_results.tsv`
-- Description: This script performs GO term enrichment analysis using the cleaned QuickGO results and the Gene Ontology file, outputting the results to a TSV file.
+### Final Notes
 
-### 8. Graph Creation 
-- **Input:** `output_quickgo_cleaned.tsv`, `go.obo`
-- **Script:** `graphs.py`
-- **Output:** 
-  - `go_graph.graphml`, `go_graph.txt`
-  - `gpx_subgraph.graphml`, `gpx_subgraph.txt`
-- Description: This script generates graphs representing the relationships between GO terms and outputs them in both GraphML and text formats.
-
-### 9. GO-terms-Proteins relationship
-- **Input:** `gpx_subgraph.txt`
-- **Script:** `proteins_gpx_go.py`
-- **Output:** `proteins_gpx_go.txt`, `proteins_gpx_go.graphml`
-- Description: This script analyzes the relationship between proteins and GO terms, producing a text file and a GraphML file representing these relationships.
-
-### 10. UniprotID-Proteinnames
-- **Input:** `proteins_gpx_go.txt`
-- **Script:** `uniprot-proteins_gpx.py`
-- **Output:** `uniprot-proteins_gpx.tsv`
-- Description: This script maps Uniprot IDs to their corresponding protein names and outputs the results to a TSV file
+- **Flexibility:** We used the GPX family as an example, but the pipeline works with any set of proteins.
+- **Modularity:** The workflow is divided into simple steps for data extraction, cleaning, analysis, and visualization.
+- **Reproducibility:** Snakemake makes it easy to run and extend the process consistently.
