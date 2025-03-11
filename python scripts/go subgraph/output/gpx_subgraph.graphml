@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d19" for="node" attr.name="subset" attr.type="string"/>
+<key id="d18" for="node" attr.name="alt_id" attr.type="string"/>
+<key id="d17" for="node" attr.name="Node" attr.type="string"/>
+<key id="d16" for="node" attr.name="property_value" attr.type="string"/>
+<key id="d15" for="node" attr.name="is_a" attr.type="string"/>
+<key id="d14" for="node" attr.name="xref" attr.type="string"/>
+<key id="d13" for="node" attr.name="synonym" attr.type="string"/>
+<key id="d12" for="node" attr.name="def" attr.type="string"/>
+<key id="d11" for="node" attr.name="namespace" attr.type="string"/>
+<key id="d10" for="node" attr.name="name" attr.type="string"/>
+<key id="d9" for="graph" attr.name="name" attr.type="string"/>
+<key id="d8" for="graph" attr.name="property_value" attr.type="string"/>
+<key id="d7" for="graph" attr.name="ontology" attr.type="string"/>
+<key id="d6" for="graph" attr.name="default-namespace" attr.type="string"/>
+<key id="d5" for="graph" attr.name="synonymtypedef" attr.type="string"/>
+<key id="d4" for="graph" attr.name="subsetdef" attr.type="string"/>
+<key id="d3" for="graph" attr.name="data-version" attr.type="string"/>
+<key id="d2" for="graph" attr.name="format-version" attr.type="string"/>
+<key id="d1" for="graph" attr.name="instances" attr.type="string"/>
+<key id="d0" for="graph" attr.name="typedefs" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">{'id': 'ends_during', 'name': 'ends during', 'namespace': 'external', 'xref': ['RO:0002093']}; {'id': 'happens_during', 'name': 'happens during', 'namespace': 'external', 'xref': ['RO:0002092'], 'is_transitive': 'true', 'is_a': ['ends_during']}; {'id': 'has_ontology_root_term', 'name': 'has ontology root term', 'namespace': 'external', 'xref': ['IAO:0000700'], 'is_metadata_tag': 'true', 'is_class_level': 'true'}; {'id': 'has_part', 'name': 'has part', 'namespace': 'external', 'xref': ['BFO:0000051'], 'is_transitive': 'true'}; {'id': 'negatively_regulates', 'name': 'negatively regulates', 'namespace': 'external', 'xref': ['RO:0002212'], 'is_a': ['regulates']}; {'id': 'occurs_in', 'name': 'occurs in', 'namespace': 'external', 'xref': ['BFO:0000066'], 'transitive_over': ['part_of']}; {'id': 'part_of', 'name': 'part of', 'namespace': 'external', 'xref': ['BFO:0000050'], 'is_transitive': 'true', 'inverse_of': ['has_part']}; {'id': 'positively_regulates', 'name': 'positively regulates', 'namespace': 'external', 'xref': ['RO:0002213'], 'holds_over_chain': ['negatively_regulates negatively_regulates'], 'is_a': ['regulates']}; {'id': 'regulates', 'name': 'regulates', 'namespace': 'external', 'xref': ['RO:0002211'], 'is_transitive': 'true'}; {'id': 'starts_during', 'name': 'starts during', 'namespace': 'external', 'xref': ['RO:0002091']}; {'id': 'term_tracker_item', 'name': 'term tracker item', 'namespace': 'external', 'xref': ['IAO:0000233'], 'is_metadata_tag': 'true', 'is_class_level': 'true'}</data>
+<data key="d1"></data>
+<data key="d2">1.2</data>
+<data key="d3">releases/2024-11-03</data>
+<data key="d4">chebi_ph7_3 "Rhea list of ChEBI terms representing the major species at pH 7.3."; gocheck_do_not_annotate "Term not to be used for direct annotation"; gocheck_obsoletion_candidate "Terms planned for obsoletion"; goslim_agr "AGR slim"; goslim_aspergillus "Aspergillus GO slim"; goslim_candida "Candida GO slim"; goslim_chembl "ChEMBL protein targets summary"; goslim_drosophila "Drosophila GO slim"; goslim_euk_cellular_processes_ribbon "GO ribbon for eukaroytic cellular processes"; goslim_flybase_ribbon "Insecta GO ribbon slim"; goslim_generic "Generic GO slim"; goslim_metagenomics "Metagenomics GO slim"; goslim_mouse "Mouse GO slim"; goslim_pir "PIR GO slim"; goslim_plant "Plant GO slim"; goslim_plant_ribbon "Plant GO ribbon"; goslim_pombe "Fission yeast GO slim"; goslim_prokaryote "GO subset for prokaryotes"; goslim_prokaryote_ribbon "Prokaryote GO ribbon slim"; goslim_synapse "synapse GO slim"; goslim_virus "GO subset for viruses"; goslim_yeast "Yeast GO slim"</data>
+<data key="d5">syngo_official_label "label approved by the SynGO project"; systematic_synonym "Systematic synonym" EXACT</data>
+<data key="d6">gene_ontology</data>
+<data key="d7">go</data>
+<data key="d8">has_ontology_root_term GO:0003674; has_ontology_root_term GO:0005575; has_ontology_root_term GO:0008150; http://purl.org/dc/elements/1.1/description "The Gene Ontology (GO) provides a framework and set of concepts for describing the functions of gene products from all organisms." xsd:string; http://purl.org/dc/elements/1.1/title "Gene Ontology" xsd:string; http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/; owl:versionInfo "2024-11-03" xsd:string</data>
+<data key="d9">go</data>
+<node id="GO:0047066">
+  <data key="d10">phospholipid-hydroperoxide glutathione peroxidase activity</data>
+  <data key="d11">molecular_function</data>
+  <data key="d12">"Catalysis of the reaction: a hydroperoxy polyunsaturated fatty acid + 2 glutathione = a hydroxy polyunsaturated fatty acid + glutathione disulfide + H2O." [PMID:3978121, PMID:8617728, RHEA:19057]</data>
+  <data key="d13">"hydroperoxide glutathione peroxidase activity" RELATED []; "peroxidation-inhibiting protein activity" RELATED [EC:1.11.1.12]; "phospholipid hydroperoxide glutathione peroxidase activity" RELATED []</data>
+  <data key="d14">EC:1.11.1.12; MetaCyc:1.11.1.12-RXN; Reactome:R-HSA-9018868 "GPX4-2 reduces 18(S)-HpEPE to 18(S)-HEPE"; Reactome:R-HSA-9018895 "GPX4-2 reduces 18(R)-HpEPE to 18(R)-HEPE"; Reactome:R-HSA-9020271 "GPX4-2 reduces 17(R)-Hp-DHA to 17(R)-HDHA"; Reactome:R-HSA-9020273 "GPX4-2 reduces 17(S)-Hp-DHA to 17(S)-HDHA"; RHEA:19057</data>
+  <data key="d15">GO:0004601</data>
+  <data key="d16">term_tracker_item https://github.com/geneontology/go-ontology/issues/23399 xsd:anyURI</data>
+  <data key="d17">GO:0047066</data>
+</node>
+<node id="GO:0004602">
+  <data key="d10">glutathione peroxidase activity</data>
+  <data key="d11">molecular_function</data>
+  <data key="d18">GO:0016224</data>
+  <data key="d12">"Catalysis of the reaction: 2 glutathione + hydrogen peroxide = oxidized glutathione + 2 H2O." [EC:1.11.1.9, PMID:36771108]</data>
+  <data key="d13">"glutathione:hydrogen-peroxide oxidoreductase activity" RELATED [EC:1.11.1.9]; "GSH peroxidase activity" RELATED [EC:1.11.1.9]; "non-selenium glutathione peroxidase activity" NARROW []; "reduced glutathione peroxidase activity" RELATED [EC:1.11.1.9]; "selenium-glutathione peroxidase activity" RELATED [EC:1.11.1.9]</data>
+  <data key="d14">EC:1.11.1.9; MetaCyc:GLUTATHIONE-PEROXIDASE-RXN; Reactome:R-HSA-2161791 "15S-HpETE is reduced to 15S-HETE by GPX1/2/4"; Reactome:R-HSA-2161946 "5S-HpETE is reduced to 5S-HETE by GPX1/2/4"; Reactome:R-HSA-2161959 "12R-HpETE is reduced to 12R-HETE by GPX1/2/4"; Reactome:R-HSA-2161999 "12S-HpETE is reduced to 12S-HETE by GPX1/2/4"; Reactome:R-HSA-3323013 "GPX1 catalyzes 2 glutathione, reduced + H2O2 =&gt; glutathione, oxidized + 2 H2O"; Reactome:R-HSA-3341277 "GPX2 catalyzes 2 glutathione, reduced + H2O2 =&gt; glutathione, oxidized + 2 H2O"; Reactome:R-HSA-3341397 "GPX3 catalyzes 2 glutathione, reduced + H2O2 =&gt; glutathione, oxidized + 2 H2O"; Reactome:R-HSA-3343700 "PRDX6:GSTP1 catalyzes 2 glutathione, reduced + H2O2 =&gt; glutathione, oxidized + 2 H2O"; Reactome:R-HSA-6799695 "GPX5,6 reduce H2O2 to H2O"; Reactome:R-HSA-71676 "GPX1 catalyzes reaction of reduced glutathione and H2O2 to form oxidized glutathione and H2O"; RHEA:16833</data>
+  <data key="d15">GO:0004601</data>
+  <data key="d16">term_tracker_item https://github.com/geneontology/go-ontology/issues/25498 xsd:anyURI</data>
+  <data key="d17">GO:0004602</data>
+</node>
+<node id="GO:0004601">
+  <data key="d10">peroxidase activity</data>
+  <data key="d11">molecular_function</data>
+  <data key="d18">GO:0016685; GO:0016686; GO:0016687; GO:0016693</data>
+  <data key="d12">"Catalysis of the reaction: a donor + a peroxide = an oxidized donor + 2 H2O." [GOC:curators]</data>
+  <data key="d19">goslim_metagenomics</data>
+  <data key="d13">"bacterial catalase-peroxidase activity" NARROW []; "donor:hydrogen-peroxide oxidoreductase activity" RELATED []; "eosinophil peroxidase activity" NARROW []; "extensin peroxidase" NARROW []; "guaiacol peroxidase" NARROW []; "heme peroxidase" NARROW []; "horseradish peroxidase (HRP)" NARROW []; "japanese radish peroxidase" NARROW []; "lactoperoxidase activity" NARROW []; "MPO" RELATED []; "myeloperoxidase activity" NARROW []; "oxyperoxidase activity" RELATED []; "peroxidase reaction" EXACT []; "protoheme peroxidase" NARROW []; "pyrocatechol peroxidase" NARROW []; "scopoletin peroxidase" NARROW []; "secretory plant peroxidase activity" NARROW []; "thiocyanate peroxidase" NARROW []; "verdoperoxidase" NARROW []</data>
+  <data key="d14">EC:1.11.1.-; KEGG_REACTION:R03532; Reactome:R-HSA-1222346 "AhpC reduces H2O2"; Reactome:R-HSA-140359 "PGG2 is reduced to PGH2 by PTGS1"; Reactome:R-HSA-209815 "Tyrosine is monoiodinated"; Reactome:R-HSA-209840 "Two DITs combine to form thyroxine"; Reactome:R-HSA-209925 "DIT and MIT combine to form triiodothyronine"; Reactome:R-HSA-209973 "Tyrosine is diiodinated"; Reactome:R-HSA-2309773 "PGG2 is reduced to PGH2 by PTGS2"; Reactome:R-HSA-2559639 "Collagen type IV sulfilimine cross-linking by peroxidasin"; Reactome:R-HSA-3341296 "GPX7,8 catalyze peroxidation of P4HB (PDI)"; Reactome:R-HSA-350901 "Iodide is organified"; Reactome:R-HSA-5631885 "PRDX1 overoxidizes"; Reactome:R-HSA-6789031 "Membrane-bound myeloperoxidase (MPO) produces hypochlorous acid (HOCl)"; Reactome:R-HSA-6789126 "Myeloperoxidase (MPO) produces hypochlorous acid (HOCl)"; Reactome:R-HSA-8855490 "Lactoperoxidase (LPO) produces OSCN-"; Reactome:R-HSA-8933635 "Myeloperoxidase (MPO) catalyzes oxidation of nitrite to nitrogen dioxide"; Wikipedia:Peroxidase</data>
+  <data key="d15">GO:0016209; GO:0016684</data>
+  <data key="d16">term_tracker_item https://github.com/geneontology/go-ontology/issues/23121 xsd:anyURI; term_tracker_item https://github.com/geneontology/go-ontology/issues/25776 xsd:anyURI</data>
+  <data key="d17">GO:0004601</data>
+</node>
+<edge source="GO:0047066" target="GO:0004601" id="is_a"/>
+<edge source="GO:0004602" target="GO:0004601" id="is_a"/>
+</graph></graphml>

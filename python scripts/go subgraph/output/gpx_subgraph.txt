@@ -1,0 +1,96 @@
+Node: GO:0047066
+name: phospholipid-hydroperoxide glutathione peroxidase activity
+namespace: molecular_function
+def: "Catalysis of the reaction: a hydroperoxy polyunsaturated fatty acid + 2 glutathione = a hydroxy polyunsaturated fatty acid + glutathione disulfide + H2O." [PMID:3978121, PMID:8617728, RHEA:19057]
+synonym: "hydroperoxide glutathione peroxidase activity" RELATED []; "peroxidation-inhibiting protein activity" RELATED [EC:1.11.1.12]; "phospholipid hydroperoxide glutathione peroxidase activity" RELATED []
+xref: EC:1.11.1.12; MetaCyc:1.11.1.12-RXN; Reactome:R-HSA-9018868 "GPX4-2 reduces 18(S)-HpEPE to 18(S)-HEPE"; Reactome:R-HSA-9018895 "GPX4-2 reduces 18(R)-HpEPE to 18(R)-HEPE"; Reactome:R-HSA-9020271 "GPX4-2 reduces 17(R)-Hp-DHA to 17(R)-HDHA"; Reactome:R-HSA-9020273 "GPX4-2 reduces 17(S)-Hp-DHA to 17(S)-HDHA"; RHEA:19057
+is_a: GO:0004601
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/23399 xsd:anyURI
+Protein:    P00450                     enables                   GO:0047066 
+Protein:    P07203                     enables                   GO:0047066 
+Protein:    P18283                     enables                   GO:0047066 
+Protein:    P36969                     enables                   GO:0047066 
+
+Node: GO:0004602
+name: glutathione peroxidase activity
+namespace: molecular_function
+alt_id: GO:0016224
+def: "Catalysis of the reaction: 2 glutathione + hydrogen peroxide = oxidized glutathione + 2 H2O." [EC:1.11.1.9, PMID:36771108]
+synonym: "glutathione:hydrogen-peroxide oxidoreductase activity" RELATED [EC:1.11.1.9]; "GSH peroxidase activity" RELATED [EC:1.11.1.9]; "non-selenium glutathione peroxidase activity" NARROW []; "reduced glutathione peroxidase activity" RELATED [EC:1.11.1.9]; "selenium-glutathione peroxidase activity" RELATED [EC:1.11.1.9]
+xref: EC:1.11.1.9; MetaCyc:GLUTATHIONE-PEROXIDASE-RXN; Reactome:R-HSA-2161791 "15S-HpETE is reduced to 15S-HETE by GPX1/2/4"; Reactome:R-HSA-2161946 "5S-HpETE is reduced to 5S-HETE by GPX1/2/4"; Reactome:R-HSA-2161959 "12R-HpETE is reduced to 12R-HETE by GPX1/2/4"; Reactome:R-HSA-2161999 "12S-HpETE is reduced to 12S-HETE by GPX1/2/4"; Reactome:R-HSA-3323013 "GPX1 catalyzes 2 glutathione, reduced + H2O2 => glutathione, oxidized + 2 H2O"; Reactome:R-HSA-3341277 "GPX2 catalyzes 2 glutathione, reduced + H2O2 => glutathione, oxidized + 2 H2O"; Reactome:R-HSA-3341397 "GPX3 catalyzes 2 glutathione, reduced + H2O2 => glutathione, oxidized + 2 H2O"; Reactome:R-HSA-3343700 "PRDX6:GSTP1 catalyzes 2 glutathione, reduced + H2O2 => glutathione, oxidized + 2 H2O"; Reactome:R-HSA-6799695 "GPX5,6 reduce H2O2 to H2O"; Reactome:R-HSA-71676 "GPX1 catalyzes reaction of reduced glutathione and H2O2 to form oxidized glutathione and H2O"; RHEA:16833
+is_a: GO:0004601
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/25498 xsd:anyURI
+Protein:    O14684                     enables                   GO:0004602 
+Protein:    O14880                     enables                   GO:0004602 
+Protein:    O15247                     enables                   GO:0004602 
+Protein:    O43708                     enables                   GO:0004602 
+Protein:    O75715                     enables                   GO:0004602 
+Protein:    P00450                     enables                   GO:0004602 
+Protein:    P07203                     enables                   GO:0004602 
+Protein:    P08263                     enables                   GO:0004602 
+Protein:    P09211                     enables                   GO:0004602 
+Protein:    P10620                     enables                   GO:0004602 
+Protein:    P18283                     enables                   GO:0004602 
+Protein:    P20292                     enables                   GO:0004602 
+Protein:    P22352                     enables                   GO:0004602 
+Protein:    P28161                     enables                   GO:0004602 
+Protein:    P30041                     enables                   GO:0004602 
+Protein:    P30711                     enables                   GO:0004602 
+Protein:    P36969                     enables                   GO:0004602 
+Protein:    P59796                     enables                   GO:0004602 
+Protein:    Q16873                     enables                   GO:0004602 
+Protein:    Q8TED1                     enables                   GO:0004602 
+Protein:    Q96SL4                     enables                   GO:0004602 
+Protein:    Q99735                     enables                   GO:0004602 
+Protein:    Q9Y2Q3                     enables                   GO:0004602 
+
+Node: GO:0004601
+name: peroxidase activity
+namespace: molecular_function
+alt_id: GO:0016685; GO:0016686; GO:0016687; GO:0016693
+def: "Catalysis of the reaction: a donor + a peroxide = an oxidized donor + 2 H2O." [GOC:curators]
+subset: goslim_metagenomics
+synonym: "bacterial catalase-peroxidase activity" NARROW []; "donor:hydrogen-peroxide oxidoreductase activity" RELATED []; "eosinophil peroxidase activity" NARROW []; "extensin peroxidase" NARROW []; "guaiacol peroxidase" NARROW []; "heme peroxidase" NARROW []; "horseradish peroxidase (HRP)" NARROW []; "japanese radish peroxidase" NARROW []; "lactoperoxidase activity" NARROW []; "MPO" RELATED []; "myeloperoxidase activity" NARROW []; "oxyperoxidase activity" RELATED []; "peroxidase reaction" EXACT []; "protoheme peroxidase" NARROW []; "pyrocatechol peroxidase" NARROW []; "scopoletin peroxidase" NARROW []; "secretory plant peroxidase activity" NARROW []; "thiocyanate peroxidase" NARROW []; "verdoperoxidase" NARROW []
+xref: EC:1.11.1.-; KEGG_REACTION:R03532; Reactome:R-HSA-1222346 "AhpC reduces H2O2"; Reactome:R-HSA-140359 "PGG2 is reduced to PGH2 by PTGS1"; Reactome:R-HSA-209815 "Tyrosine is monoiodinated"; Reactome:R-HSA-209840 "Two DITs combine to form thyroxine"; Reactome:R-HSA-209925 "DIT and MIT combine to form triiodothyronine"; Reactome:R-HSA-209973 "Tyrosine is diiodinated"; Reactome:R-HSA-2309773 "PGG2 is reduced to PGH2 by PTGS2"; Reactome:R-HSA-2559639 "Collagen type IV sulfilimine cross-linking by peroxidasin"; Reactome:R-HSA-3341296 "GPX7,8 catalyze peroxidation of P4HB (PDI)"; Reactome:R-HSA-350901 "Iodide is organified"; Reactome:R-HSA-5631885 "PRDX1 overoxidizes"; Reactome:R-HSA-6789031 "Membrane-bound myeloperoxidase (MPO) produces hypochlorous acid (HOCl)"; Reactome:R-HSA-6789126 "Myeloperoxidase (MPO) produces hypochlorous acid (HOCl)"; Reactome:R-HSA-8855490 "Lactoperoxidase (LPO) produces OSCN-"; Reactome:R-HSA-8933635 "Myeloperoxidase (MPO) catalyzes oxidation of nitrite to nitrogen dioxide"; Wikipedia:Peroxidase
+is_a: GO:0016209; GO:0016684
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/23121 xsd:anyURI; term_tracker_item https://github.com/geneontology/go-ontology/issues/25776 xsd:anyURI
+Protein:    A1KZ92                     enables                   GO:0004601 
+Protein:    O75715                     enables                   GO:0004601 
+Protein:    P02008                  contributes_to               GO:0004601 
+Protein:    P02042                  contributes_to               GO:0004601 
+Protein:    P02100                  contributes_to               GO:0004601 
+Protein:    P02144                     enables                   GO:0004601 
+Protein:    P04040                     enables                   GO:0004601 
+Protein:    P05164                     enables                   GO:0004601 
+Protein:    P07202                     enables                   GO:0004601 
+Protein:    P07203                     enables                   GO:0004601 
+Protein:    P08263                     enables                   GO:0004601 
+Protein:    P09105                  contributes_to               GO:0004601 
+Protein:    P11678                     enables                   GO:0004601 
+Protein:    P18283                     enables                   GO:0004601 
+Protein:    P22079                     enables                   GO:0004601 
+Protein:    P22352                     enables                   GO:0004601 
+Protein:    P23219                     enables                   GO:0004601 
+Protein:    P30041                     enables                   GO:0004601 
+Protein:    P30044                     enables                   GO:0004601 
+Protein:    P30048                     enables                   GO:0004601 
+Protein:    P32119                     enables                   GO:0004601 
+Protein:    P35354                     enables                   GO:0004601 
+Protein:    P36969                     enables                   GO:0004601 
+Protein:    P58004                     enables                   GO:0004601 
+Protein:    P59796                     enables                   GO:0004601 
+Protein:    P68871                  contributes_to               GO:0004601 
+Protein:    P69891                  contributes_to               GO:0004601 
+Protein:    P69892                  contributes_to               GO:0004601 
+Protein:    P69905                  contributes_to               GO:0004601 
+Protein:    Q06830                     enables                   GO:0004601 
+Protein:    Q13162                     enables                   GO:0004601 
+Protein:    Q6B0K9                  contributes_to               GO:0004601 
+Protein:    Q8TED1                     enables                   GO:0004601 
+Protein:    Q8WWM9                     enables                   GO:0004601 
+Protein:    Q8WWN9                     enables                   GO:0004601 
+Protein:    Q92626                     enables                   GO:0004601 
+Protein:    Q96SL4                     enables                   GO:0004601 
+Protein:    Q9BRA2                     enables                   GO:0004601 
+Protein:    Q9NRD8                     enables                   GO:0004601 
+Protein:    Q9NRD9                     enables                   GO:0004601 
