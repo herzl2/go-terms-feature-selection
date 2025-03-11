@@ -22,7 +22,8 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
   - matplotlib
   - obonet
   - requests
-  - jq (for shell scripts)
+- Shell Tools
+  - jq, curl, grep, sed, tr 
 
 ## Usage 
 1. **Input Data:** Prepare your input file in FASTA format (e.g., `oxidative_stress.faa`).
