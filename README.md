@@ -42,7 +42,7 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
    
 4. **Outputs:**
    - Processed files (e.g., cleaned annotation TSV files) and merged results are generated in the output directory.
-   - GO graphs are produced in GraphML format, including a full GO network (`obo_go_graph.graphml`) and case-specific subgraphs (e.g., `obo_gpx_graph.graphml`).
+   - GO graphs are produced in GraphML format, including a full GO network (`go_graph.graphml`) and case-specific subgraphs (e.g., `gpx_graph.graphml`).
    - Enrichment analysis reports and any additional output files are also placed in the output directory.
   
 ## Workflow and Script Overview 
