@@ -69,7 +69,7 @@ It integrates data from UniProt, QuickGO, and InterPro to perform feature select
 
 ### 4. GO Subgraph Extraction 
 - **obo_graphs.py:**  
-  Build comprehensive GO term graphs from the `go.obo` file, generating full GO graphs (`obo_go_graph.graphml`) and case-specific subgraphs subgraphs (`obo_gpx_graph.graphml`) for the whole Gene Ontology to get an overview of possible GO terms for comparison of the actual results.
+  Build comprehensive GO term graphs from the `go.obo` file, generating full GO graphs (`obo_go_graph.graphml`) and case-specific subgraphs (`obo_gpx_graph.graphml`) for the whole Gene Ontology to get an overview of possible GO terms for comparison of the actual results.
 
 - **graphs.py:**  
   Vizualizes results as Go term-Graph for dataset of interest (`output_quickgo_cleaned.tsv` combined with go.obo) as `go_graph.graphml` and `go_graph.txt`. For case-specific subgraph `gpx_subgraph.graphml` and `gpx_subgrap.txt` are created.
